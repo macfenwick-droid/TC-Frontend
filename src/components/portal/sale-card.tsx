@@ -39,9 +39,9 @@ export function SaleCard({
         {day && (
           <div
             aria-hidden="true"
-            className="hidden w-16 flex-col items-center rounded-2xl bg-cream py-2 leading-none sm:flex"
+            className="hidden w-16 flex-col items-center rounded-2xl bg-brand py-2 leading-none sm:flex"
           >
-            <span className="text-xs font-bold tracking-wider text-muted-foreground uppercase">{day.month}</span>
+            <span className="text-xs font-bold tracking-wider text-ink-2 uppercase">{day.month}</span>
             <span className="font-heading text-3xl font-extrabold">{day.day}</span>
           </div>
         )}
@@ -64,7 +64,7 @@ export function SaleCard({
           </p>
           <ul className="mt-1.5 flex flex-wrap gap-2" aria-label="Seats">
             {chips.map((c) => (
-              <li key={c.k} className="rounded-full bg-cream px-3 py-1 text-sm">
+              <li key={c.k} className="rounded-full bg-mint px-3 py-1 text-sm">
                 {c.k}: <b>{c.v}</b>
               </li>
             ))}

@@ -60,11 +60,11 @@ export function SubmissionSummary() {
         </h2>
         {s.kind === "single" && (
           <div className="mt-3 flex flex-wrap gap-2">
-            <span className="inline-flex items-center gap-2 rounded-full bg-cream px-3 py-1.5 text-sm font-medium">
+            <span className="inline-flex items-center gap-2 rounded-full bg-mint px-3 py-1.5 text-sm font-medium">
               <Calendar className="size-4 text-muted-foreground" aria-hidden="true" />
               {when(s.eventDate, s.eventTime)}
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-cream px-3 py-1.5 text-sm font-medium">
+            <span className="inline-flex items-center gap-2 rounded-full bg-mint px-3 py-1.5 text-sm font-medium">
               <MapPin className="size-4 text-muted-foreground" aria-hidden="true" />
               {place(s.venue, s.state)}
             </span>

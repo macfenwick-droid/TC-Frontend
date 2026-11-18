@@ -108,12 +108,12 @@ export function OfferView() {
             </header>
 
             <div className="flex flex-wrap gap-2 px-6 sm:px-8">
-              <span className="inline-flex items-center gap-2 rounded-full bg-cream px-3 py-1.5 text-sm font-medium">
+              <span className="inline-flex items-center gap-2 rounded-full bg-mint px-3 py-1.5 text-sm font-medium">
                 <Calendar className="size-4 text-muted-foreground" aria-hidden="true" />
                 {formatEventDateTime(tg.event_date, tg.event_time) || "—"}
               </span>
               {(tg.venue || tg.state) && (
-                <span className="inline-flex items-center gap-2 rounded-full bg-cream px-3 py-1.5 text-sm font-medium">
+                <span className="inline-flex items-center gap-2 rounded-full bg-mint px-3 py-1.5 text-sm font-medium">
                   <MapPin className="size-4 text-muted-foreground" aria-hidden="true" />
                   {tg.venue ? `${tg.venue}${tg.state ? `, ${tg.state}` : ""}` : tg.state}
                 </span>
