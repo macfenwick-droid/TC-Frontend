@@ -28,9 +28,7 @@ export default function HomePage() {
         <OldVsNew />
         <Benefits />
         <Stats />
-      </div>
-      <Comparison />
-      <div className="relative isolate overflow-hidden">
+        <Comparison />
         <ValueChart />
         <FinalCta />
         <Glow tone="lilac" className="-bottom-40 -left-40 size-[560px]" />
