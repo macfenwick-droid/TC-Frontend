@@ -42,7 +42,12 @@ export function Comparison() {
           description="See why sellers prefer TicketCricket"
         />
 
-        <div className="relative overflow-x-auto rounded-[28px] border border-white/10">
+        <div
+          tabIndex={0}
+          role="region"
+          aria-label="Comparison table (scrolls sideways on small screens)"
+          className="relative overflow-x-auto rounded-[28px] border border-white/10 focus-visible:ring-4 focus-visible:ring-brand/60 focus-visible:outline-none"
+        >
           <table className="w-full min-w-[560px] border-collapse text-left">
             <thead>
               <tr className="border-b border-white/10">

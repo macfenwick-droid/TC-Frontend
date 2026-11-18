@@ -8,7 +8,7 @@ export default function SiteLayout({ children }: LayoutProps<"/">) {
     <>
       <ResellerNotice />
       <Header />
-      <main id="main" className="flex flex-1 flex-col">
+      <main id="main" className="relative isolate flex flex-1 flex-col">
         {children}
       </main>
       <Footer />

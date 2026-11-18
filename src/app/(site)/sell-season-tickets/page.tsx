@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SeasonTicketForm } from "@/components/sell/season-ticket-form";
 import { SellLayout } from "@/components/sell/sell-layout";
+import { PageGlow } from "@/components/brand/glow";
 
 const description = "Select the games you want to sell and we'll send you a cash offer for each one.";
 
@@ -12,16 +13,19 @@ export const metadata: Metadata = {
 
 export default function SellSeasonTicketsPage() {
   return (
-    <SellLayout
-      eyebrow="Sell Season Tickets"
-      title={
-        <>
-          Get Offers on <span className="text-link">Every Game</span>
-        </>
-      }
-      description={description}
-    >
-      <SeasonTicketForm />
-    </SellLayout>
+    <>
+      <PageGlow />
+      <SellLayout
+        eyebrow="Sell Season Tickets"
+        title={
+          <>
+            Get Offers on <span className="text-link">Every Game</span>
+          </>
+        }
+        description={description}
+      >
+        <SeasonTicketForm />
+      </SellLayout>
+    </>
   );
 }

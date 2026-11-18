@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/brand/container";
 import { NewsDashboard } from "@/components/news/news-dashboard";
+import { PageGlow } from "@/components/brand/glow";
 
 const description =
   "Live ESPN results, injuries, headlines and a ticket-demand signal for NFL, college football, NBA and NHL teams.";
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function NewsPage() {
   return (
     <>
+      <PageGlow />
       <section>
         <Container className="flex flex-col gap-4 pt-12 pb-10 sm:pt-16">
           <h1 className="animate-rise text-5xl leading-[1.02] font-extrabold sm:text-6xl lg:text-7xl">

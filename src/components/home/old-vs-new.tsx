@@ -1,5 +1,6 @@
 import { Check, X } from "lucide-react";
 import { Container } from "@/components/brand/container";
+import { Glow } from "@/components/brand/glow";
 import { Cta } from "@/components/brand/cta";
 import { SectionHeading } from "@/components/brand/section-heading";
 
@@ -22,7 +23,9 @@ const newWay = [
 
 export function OldVsNew() {
   return (
-    <section className="border-y border-line bg-white">
+    <section className="relative">
+      <Glow tone="peach" className="top-1/3 -left-40 size-[560px]" />
+      <Glow tone="mint" className="-right-40 bottom-0 size-[640px]" />
       <Container className="flex flex-col gap-12 py-20 sm:py-24">
         <SectionHeading
           align="center"
@@ -32,7 +35,7 @@ export function OldVsNew() {
         />
 
         <div className="relative grid gap-5 lg:grid-cols-2">
-          <div className="flex flex-col gap-6 rounded-[28px] border border-line bg-cream p-7 sm:p-9">
+          <div className="flex flex-col gap-6 rounded-[28px] border border-line bg-white p-7 sm:p-9">
             <h3 className="text-2xl font-extrabold text-muted-foreground">The Old Way</h3>
             <ul className="flex flex-col gap-4">
               {oldWay.map((item) => (

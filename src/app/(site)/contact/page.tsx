@@ -4,6 +4,7 @@ import { Container } from "@/components/brand/container";
 import { Eyebrow } from "@/components/brand/eyebrow";
 import { ContactForm } from "@/components/contact/contact-form";
 import { siteConfig } from "@/config/site";
+import { PageGlow } from "@/components/brand/glow";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -23,6 +24,7 @@ const hours = [
 export default function ContactPage() {
   return (
     <>
+      <PageGlow />
       <section>
         <Container className="flex flex-col gap-4 pt-12 pb-10 sm:pt-16">
           <Eyebrow className="animate-rise">Contact</Eyebrow>

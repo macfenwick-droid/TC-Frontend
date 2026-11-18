@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SellLayout } from "@/components/sell/sell-layout";
 import { TicketForm } from "@/components/sell/ticket-form";
+import { PageGlow } from "@/components/brand/glow";
 
 const description = "Fill in your ticket details and we'll send you a cash offer within minutes.";
 
@@ -12,16 +13,19 @@ export const metadata: Metadata = {
 
 export default function SellPage() {
   return (
-    <SellLayout
-      eyebrow="Sell Tickets"
-      title={
-        <>
-          Get Your <span className="text-link">Instant Offer</span>
-        </>
-      }
-      description={description}
-    >
-      <TicketForm />
-    </SellLayout>
+    <>
+      <PageGlow />
+      <SellLayout
+        eyebrow="Sell Tickets"
+        title={
+          <>
+            Get Your <span className="text-link">Instant Offer</span>
+          </>
+        }
+        description={description}
+      >
+        <TicketForm />
+      </SellLayout>
+    </>
   );
 }

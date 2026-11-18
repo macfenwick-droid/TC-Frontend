@@ -12,6 +12,12 @@ export const mainNav: NavLink[] = [
   { href: siteConfig.blogUrl, label: "Blog", external: true },
 ];
 
+/**
+ * Shortcut to the seller dashboard in the header, for everyone: signed-out sellers are sent
+ * to sign in and then straight back here (RequireAuth's ?redirect).
+ */
+export const activeSalesLink: NavLink = { href: "/active-sales", label: "Active Sales" };
+
 /** Signed-in account links — same as the current site's account dropdown. */
 export const accountNav: NavLink[] = [
   { href: "/active-sales", label: "Active Sales" },

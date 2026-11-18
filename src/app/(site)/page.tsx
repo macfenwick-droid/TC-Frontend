@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Glow } from "@/components/brand/glow";
 import { Benefits } from "@/components/home/benefits";
 import { Comparison } from "@/components/home/comparison";
 import { FinalCta } from "@/components/home/final-cta";
@@ -21,13 +22,20 @@ export default function HomePage() {
     <>
       <JsonLd data={organizationJsonLd()} />
       <JsonLd data={websiteJsonLd()} />
-      <Hero />
-      <OldVsNew />
-      <Benefits />
-      <Stats />
+      {/* Light sections share one backdrop so the hero's colour glows flow down the page. */}
+      <div className="relative isolate overflow-hidden">
+        <Hero />
+        <OldVsNew />
+        <Benefits />
+        <Stats />
+      </div>
       <Comparison />
-      <ValueChart />
-      <FinalCta />
+      <div className="relative isolate overflow-hidden">
+        <ValueChart />
+        <FinalCta />
+        <Glow tone="lilac" className="-bottom-40 -left-40 size-[560px]" />
+        <Glow tone="sky" className="-right-40 -bottom-24 size-[480px]" />
+      </div>
     </>
   );
 }

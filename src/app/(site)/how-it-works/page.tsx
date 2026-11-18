@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/brand/section-heading";
 import { tintClasses, type Tint } from "@/components/brand/tint-card";
 import { FinalCta } from "@/components/home/final-cta";
 import { cn } from "@/lib/utils";
+import { PageGlow } from "@/components/brand/glow";
 
 export const metadata: Metadata = {
   title: "How It Works",
@@ -61,6 +62,7 @@ const guarantees = [
 export default function HowItWorksPage() {
   return (
     <>
+      <PageGlow long />
       {/* Hero + step timeline */}
       <section>
         <Container className="flex flex-col gap-14 pt-12 pb-20 sm:pt-16">
@@ -96,7 +98,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Step details */}
-      <section className="border-y border-line bg-white">
+      <section>
         <Container className="flex flex-col gap-16 py-20 sm:gap-[72px] sm:py-24">
           {steps.map(({ icon: Icon, title, body, detail, tint, label }, i) => (
             <div

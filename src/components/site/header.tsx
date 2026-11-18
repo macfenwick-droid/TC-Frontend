@@ -11,7 +11,7 @@ import { Logo } from "@/components/brand/logo";
 import { Avatar, UserMenu, displayName } from "@/components/site/user-menu";
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Skeleton } from "@/components/ui/skeleton";
-import { accountNav, mainNav, type NavLink } from "@/config/nav";
+import { accountNav, activeSalesLink, mainNav, type NavLink } from "@/config/nav";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
 
@@ -68,14 +68,14 @@ export function Header() {
         <Logo />
 
         {/* Desktop navigation */}
-        <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
-          {mainNav.map((link) => (
+        <nav aria-label="Main" className="hidden items-center gap-5 lg:flex">
+          {[activeSalesLink, ...mainNav].map((link) => (
             <NavItem
               key={link.href}
               link={link}
               className={(active) =>
                 cn(
-                  "inline-flex items-center gap-1 py-2.5 text-[15px] font-medium transition-colors hover:text-link",
+                  "inline-flex items-center gap-1 py-2.5 text-[15px] font-medium whitespace-nowrap transition-colors hover:text-link",
                   active ? "font-bold text-link" : "text-ink"
                 )
               }
@@ -144,7 +144,8 @@ export function Header() {
                 onClick={closeOnLink}
                 className="flex flex-1 flex-col gap-1 overflow-y-auto p-4"
               >
-                {mainNav.map((link) => (
+                {/* Signed-in users get Active Sales in the account section below. */}
+                {(user ? mainNav : [activeSalesLink, ...mainNav]).map((link) => (
                   <NavItem
                     key={link.href}
                     link={link}

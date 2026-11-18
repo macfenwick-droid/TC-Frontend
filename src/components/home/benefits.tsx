@@ -1,5 +1,6 @@
 import { Clock, Headphones, Shield, TrendingUp, Wallet, Zap } from "lucide-react";
 import { Container } from "@/components/brand/container";
+import { Glow } from "@/components/brand/glow";
 import { SectionHeading } from "@/components/brand/section-heading";
 import { TintCard, tintClasses, type Tint } from "@/components/brand/tint-card";
 import { cn } from "@/lib/utils";
@@ -46,7 +47,9 @@ const benefits: { icon: typeof Zap; title: string; body: string; tint: Tint }[] 
 
 export function Benefits() {
   return (
-    <section>
+    <section className="relative">
+      <Glow tone="lilac" className="top-10 -right-48 size-[620px]" />
+      <Glow tone="sky" className="-bottom-32 -left-48 size-[620px]" />
       <Container className="flex flex-col gap-12 py-20 sm:py-24">
         <SectionHeading
           eyebrow="Why us"

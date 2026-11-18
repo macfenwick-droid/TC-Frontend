@@ -42,7 +42,7 @@ export function UserMenu({ user, onLogout }: { user: AuthUser; onLogout: () => v
         className="flex min-h-11 items-center gap-2 rounded-full border border-line bg-white py-1 pr-3 pl-1 font-semibold outline-none hover:bg-cream focus-visible:ring-4 focus-visible:ring-brand/40"
       >
         <Avatar user={user} />
-        <span className="max-w-[120px] truncate text-sm">{displayName(user)}</span>
+        <span className="max-w-[88px] truncate text-sm lg:hidden xl:inline">{displayName(user)}</span>
         <ChevronDown className="size-4 text-muted-foreground" aria-hidden="true" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-64 rounded-2xl p-2">

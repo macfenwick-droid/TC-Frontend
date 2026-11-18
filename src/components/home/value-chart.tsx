@@ -1,5 +1,6 @@
 import { TrendingDown } from "lucide-react";
 import { Container } from "@/components/brand/container";
+import { Glow } from "@/components/brand/glow";
 import { Cta } from "@/components/brand/cta";
 import { Eyebrow } from "@/components/brand/eyebrow";
 
@@ -60,7 +61,9 @@ const chartSummary = data.map((d) => `${d.label}: ${d.value}%`).join(", ");
 
 export function ValueChart() {
   return (
-    <section>
+    <section className="relative">
+      <Glow tone="mint" className="top-24 -left-48 size-[620px]" />
+      <Glow tone="peach" className="top-1/3 -right-48 size-[620px]" />
       <Container className="flex flex-col items-center gap-10 py-20 sm:py-24">
         <div className="flex max-w-2xl flex-col items-center gap-4 text-center">
           <Eyebrow tone="peach" className="text-[#9A3412]">

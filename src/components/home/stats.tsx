@@ -1,4 +1,5 @@
 import { Container } from "@/components/brand/container";
+import { Glow } from "@/components/brand/glow";
 import { tintClasses, type Tint } from "@/components/brand/tint-card";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -13,7 +14,8 @@ const stats: { value: string; label: string; tint: Tint }[] = [
 
 export function Stats() {
   return (
-    <section aria-label="TicketCricket in numbers">
+    <section aria-label="TicketCricket in numbers" className="relative">
+      <Glow tone="butter" className="top-1/2 left-1/2 h-[420px] w-[900px] max-w-[160vw] -translate-1/2" />
       <Container className="py-16 sm:py-20">
         <dl className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
           {stats.map(({ value, label, tint }) => (

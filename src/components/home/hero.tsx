@@ -15,10 +15,10 @@ const offerChecks = ["Zero seller fees with PayPal", "PayPal or Venmo", "Sent wi
 /** Home hero — design layout (copy left, floating offer card right), current site's copy. */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative">
       {/* Soft colour blobs behind the hero, from the design */}
-      <div aria-hidden="true" className="pointer-events-none absolute -top-10 -right-16 size-[520px] rounded-full bg-mint blur-[70px]" />
-      <div aria-hidden="true" className="pointer-events-none absolute -bottom-10 -left-32 size-[360px] rounded-full bg-butter blur-[70px]" />
+      <div aria-hidden="true" className="pointer-events-none absolute -top-10 -right-16 -z-10 size-[520px] rounded-full bg-mint blur-[70px]" />
+      <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -left-32 -z-10 size-[420px] rounded-full bg-butter blur-[70px]" />
 
       <Container className="relative grid items-center gap-14 pt-10 pb-20 sm:pb-24 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="flex flex-col items-start gap-6">

@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/brand/section-heading";
 import { FaqBrowser } from "@/components/faq/faq-browser";
 import { JsonLd, faqPageJsonLd } from "@/components/seo/json-ld";
 import { faqs } from "@/content/faqs";
+import { PageGlow } from "@/components/brand/glow";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <>
+      <PageGlow />
       <JsonLd data={faqPageJsonLd(faqs)} />
 
       <section>
