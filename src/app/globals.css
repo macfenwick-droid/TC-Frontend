@@ -1,0 +1,234 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/*
+ * TicketCricket design tokens (from the Claude Design canvas "TicketCricket Website").
+ * Light theme only — the design has no dark mode.
+ */
+
+:root {
+  /* Brand palette */
+  --tc-cream: #fff9f1;
+  --tc-ink: #16131f;
+  --tc-ink-2: #3a3547;
+  --tc-brand: #2bd47d;
+  --tc-link: #047857;
+  --tc-line: #ede4d6;
+  --tc-muted: #5f5a6b;
+  --tc-subtle: #736d87; /* 4.7:1 on cream (WCAG AA) */
+  --tc-on-dark-muted: #c9c4d6;
+
+  /* Tints (cards, badges) */
+  --tc-mint: #dcf7e8;
+  --tc-peach: #ffe5dc;
+  --tc-butter: #fff1c7;
+  --tc-lilac: #ebe6ff;
+  --tc-sky: #dcefff;
+
+  /* Status colors */
+  --tc-amber-fg: #8a5a00;
+  --tc-blue-fg: #0b5c99;
+  --tc-coral: #ff6a45;
+  --tc-yellow: #ffc530;
+
+  /* shadcn semantic tokens mapped onto the palette */
+  --background: var(--tc-cream);
+  --foreground: var(--tc-ink);
+  --card: #ffffff;
+  --card-foreground: var(--tc-ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--tc-ink);
+  --primary: var(--tc-ink);
+  --primary-foreground: #ffffff;
+  --secondary: #ffffff;
+  --secondary-foreground: var(--tc-ink);
+  --muted: #f6efe4;
+  --muted-foreground: var(--tc-muted);
+  --accent: var(--tc-mint);
+  --accent-foreground: var(--tc-ink);
+  --destructive: #c2410c;
+  --border: var(--tc-line);
+  --input: var(--tc-line);
+  --ring: var(--tc-ink);
+  --chart-1: var(--tc-brand);
+  --chart-2: var(--tc-yellow);
+  --chart-3: var(--tc-coral);
+  --chart-4: #7a5cff;
+  --chart-5: #2c9cf0;
+  --radius: 0.875rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: var(--tc-ink);
+  --sidebar-primary: var(--tc-ink);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--tc-mint);
+  --sidebar-accent-foreground: var(--tc-ink);
+  --sidebar-border: var(--tc-line);
+  --sidebar-ring: var(--tc-ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Brand utilities: bg-cream, text-ink, bg-brand, text-link, bg-mint, ... */
+  --color-cream: var(--tc-cream);
+  --color-ink: var(--tc-ink);
+  --color-ink-2: var(--tc-ink-2);
+  --color-brand: var(--tc-brand);
+  --color-link: var(--tc-link);
+  --color-line: var(--tc-line);
+  --color-subtle: var(--tc-subtle);
+  --color-on-dark-muted: var(--tc-on-dark-muted);
+  --color-mint: var(--tc-mint);
+  --color-peach: var(--tc-peach);
+  --color-butter: var(--tc-butter);
+  --color-lilac: var(--tc-lilac);
+  --color-sky: var(--tc-sky);
+  --color-amber-fg: var(--tc-amber-fg);
+  --color-blue-fg: var(--tc-blue-fg);
+  --color-coral: var(--tc-coral);
+  --color-yellow: var(--tc-yellow);
+
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Motion from the design */
+  --animate-rise: tc-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-float: tc-float 5s ease-in-out infinite;
+  --animate-live: tc-live 1.6s ease-out infinite;
+  --animate-pop: tc-pop 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-swing: tc-swing 3.2s ease-in-out infinite;
+  --animate-drift: tc-drift 9s ease-in-out infinite;
+
+  @keyframes tc-rise {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes tc-float {
+    0%,
+    100% {
+      translate: 0 0;
+    }
+    50% {
+      translate: 0 -10px;
+    }
+  }
+  @keyframes tc-live {
+    0% {
+      box-shadow: 0 0 0 0 rgb(43 212 125 / 0.7);
+    }
+    100% {
+      box-shadow: 0 0 0 9px rgb(43 212 125 / 0);
+    }
+  }
+  @keyframes tc-swing {
+    0%,
+    100% {
+      rotate: -6deg;
+    }
+    50% {
+      rotate: 6deg;
+    }
+  }
+  @keyframes tc-drift {
+    0%,
+    100% {
+      translate: 0 0;
+    }
+    50% {
+      translate: 0 -18px;
+    }
+  }
+  @keyframes tc-pop {
+    0% {
+      opacity: 0;
+      scale: 0.3;
+    }
+    60% {
+      scale: 1.12;
+    }
+    100% {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+  }
+  a {
+    color: inherit;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
