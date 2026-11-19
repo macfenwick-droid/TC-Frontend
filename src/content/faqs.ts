@@ -7,21 +7,15 @@ export type Faq = { category: string; question: string; answer: string };
 export const faqs: Faq[] = [
   {
     category: "General",
-    question: "What is Ticket Cricket?",
+    question: "What is TicketCricket?",
     answer:
       "We are a platform that pays you same day for your event tickets. Our goal is to make the ticket selling process easy for you offering a hassle free experience by buying your tickets directly from you. Our offers will always be fair and your experience will be hassle free.",
   },
   {
     category: "General",
-    question: "Do you sell tickets as well on Ticketcricket.co?",
-    answer:
-      "No, we currently only purchase tickets via Ticketcricket.co.",
-  },
-  {
-    category: "General",
     question: "Do you sell tickets?",
     answer:
-      "No, we currently only purchase tickets via Ticketcricket.co.",
+      "No, we currently only purchase tickets via TicketCricket.co.",
   },
   {
     category: "General",
@@ -51,7 +45,7 @@ export const faqs: Faq[] = [
     category: "Selling Process",
     question: "I resubmitted a new request but the offer is different than when I submitted previously, why is that?",
     answer:
-      "Market value of tickets are very volatile and our offers are based on real time data available to the ticket cricket team. Therefore, our existing offers are based on this real time data.",
+      "Market value of tickets are very volatile and our offers are based on real time data available to the TicketCricket team. Therefore, our existing offers are based on this real time data.",
   },
   {
     category: "Selling Process",
@@ -69,7 +63,7 @@ export const faqs: Faq[] = [
     category: "Payments & Transfer",
     question: "How long is it between when I transfer tickets to you and when I get paid?",
     answer:
-      "Once you decide to move forward with selling tickets, you will get follow up instructions. We do our best to conduct the transaction in real time on the same day. One of our team members will coordinate the transactions with you live on our chat bot. Please note, the hours to get a live agent to work with you is between 9 AM and 9 PM Pacific Standard Time.",
+      "Once you decide to move forward with selling tickets, you will get follow up instructions. We do our best to conduct the transaction in real time on the same day. One of our team members will coordinate the transactions with you on our live chat. Please note, the hours to get a live agent to work with you is between 9 AM and 9 PM Pacific Time (PT), every day.",
   },
   {
     category: "Payments & Transfer",

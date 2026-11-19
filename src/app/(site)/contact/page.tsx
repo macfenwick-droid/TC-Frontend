@@ -16,10 +16,7 @@ export const metadata: Metadata = {
 const { contact } = siteConfig;
 
 // Copy from the current site's Contact page.
-const hours = [
-  { days: "Mon – Fri", time: "9am – 9pm PST" },
-  { days: "Sat – Sun", time: "10am – 6pm PST" },
-];
+const hours = [{ days: "Every day", time: "9am – 9pm PT" }];
 
 export default function ContactPage() {
   return (
