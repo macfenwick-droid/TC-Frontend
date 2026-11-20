@@ -1,14 +1,14 @@
 /**
  * Reseller disclosure required by Google Ads for ticket resellers: a clear, prominent
  * statement (top of every page, including ad landing pages) that TicketCricket is a
- * reseller / secondary marketplace and not the primary ticket provider.
+ * resale marketplace and not the primary ticket seller. Wording approved by the CEO.
  */
 export const RESELLER_DISCLOSURE =
-  "TicketCricket is a ticket reseller and secondary marketplace, not the primary ticket provider. Prices may be higher or lower than face value.";
+  "TicketCricket is an independent ticket resale marketplace. We are not the primary ticket seller and are not affiliated with any team, venue, or event organizer. Prices may be above face value.";
 
 export function ResellerNotice() {
   return (
-    <div className="bg-ink px-4 py-2 text-center text-xs leading-snug font-medium text-on-dark-muted sm:text-[13px]">
+    <div className="border-b border-brand/25 bg-mint px-4 py-2 text-center text-xs leading-snug font-medium text-ink-2 sm:text-[13px]">
       <p>{RESELLER_DISCLOSURE}</p>
     </div>
   );
